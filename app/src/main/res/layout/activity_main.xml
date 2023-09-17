@@ -12,13 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onclick"
-        android:text="Button"
+        android:text="click here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ettel"
-        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="@+id/ettel"
         app:layout_constraintTop_toBottomOf="@+id/ettel"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.063"
+        app:rippleColor="#B81818" />
 
     <EditText
         android:id="@+id/ettf"
@@ -62,9 +63,10 @@
         android:id="@+id/fname"
         android:layout_width="319dp"
         android:layout_height="27dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="sans-serif"
-        android:text="First Name:"
+        android:text="Your Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textSize="16sp"
         android:typeface="sans"
         app:layout_constraintEnd_toEndOf="@+id/bt1"
@@ -75,11 +77,11 @@
         android:id="@+id/sname"
         android:layout_width="329dp"
         android:layout_height="28dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="88dp"
         android:text="Second Name:"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/fname"
-        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/fname"
         app:layout_constraintTop_toBottomOf="@+id/fname" />
 
@@ -87,11 +89,11 @@
         android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="28dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="100dp"
         android:text="Email:"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/sname"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/sname"
         app:layout_constraintTop_toBottomOf="@+id/sname" />
 
