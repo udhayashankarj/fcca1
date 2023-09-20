@@ -4,25 +4,39 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    @Override
+    public void onClick(View view) {
+        if(view.getId()==R.id.reg) {
+            System.out.println("Registered");
+            setContentView(R.layout.login);
+        }
+        else if(view.getId()==R.id.loginButton)
+                System.out.println("logged in");
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button reg = findViewById(R.id.reg);
+        reg.setOnClickListener(this);
     }
-    public void onclick(View view){
-        TextView fv = findViewById(R.id.fname);
-        TextView sv = findViewById(R.id.sname);
-        TextView ev = findViewById(R.id.email);
-        EditText fe=findViewById(R.id.ettf);
-        EditText se=findViewById(R.id.etts);
-        EditText ee=findViewById(R.id.ettel);
-        fv.setText("First Name: "+fe.getText().toString());
-        sv.setText("Second Name: "+se.getText().toString());
-        ev.setText("Email: "+ee.getText().toString());
+    public void login(View view){
+        setContentView(R.layout.login);
     }
+    public void forgetpasswordpage(View view){
+        /*TextView phNo = findViewById(R.id.editPhNo);
+        TextView email = findViewById(R.id.editEmail);
+        TextView pass = findViewById(R.id.editPassword);
+        System.out.println(phNo.getText());
+        System.out.println(email.getText());
+        System.out.println(pass.getText());*/
+        setContentView(R.layout.forgetpassword);
+    }
+
+
 }
